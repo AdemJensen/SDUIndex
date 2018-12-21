@@ -1,0 +1,6 @@
+.top-left {
+    width: 565px;
+    height: 115px;
+    float: left;
+    background: url(../../resource/logo.png) no-repeat 100% 50%;
+}
