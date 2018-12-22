@@ -1,18 +1,81 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="col-12">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 
     <link rel="stylesheet" href="lib/css/eventCalendar-home.css">
     <link rel="stylesheet" href="lib/css/gridSystem.css">
+    <link rel="stylesheet" href="lib/css/shutter.css">
+    <link rel="stylesheet" href="lib/css/default.css">
+    <script src="lib/js/jQuery.js"></script>
+    <script src="lib/js/velocity.js"></script>
+    <script src="lib/js/shutter.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/css/style7.css" />
+
+    <!--[if IE]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]--><script>document.documentElement.className = 'js';</script>
 </head>
-<body>
-<div id="master-container">
-    <div id="nav-bar">
-        <a class="top-left" target=""></a>
+<body class="col-12 flex flex-column flex-center">
+<div id="nav-bar" class="top-bg flex flex-between">
+    <div class="top-left"></div>
+    <div id="search-button" class="flex flex-center" style="padding-right: 35px;">
+        <main class="main-wrap">
+            <div class="search-wrap">
+                <button id="btn-search" class="btn btn--search"><img src="https://pic.52112.com/icon/256/20181207/26085/1291337.png" style="height: 50px;"/></button>
+                <button id="btn-search-close" class="btn btn--hidden btn--search-close" aria-label="Close search form"><img src="https://pic.52112.com/icon/256/20180201/11994/603338.png" style="height: 50px;"/></button>
+            </div>
+            <div class="search">
+                <div class="search__inner">
+                    <form class="search__form" action="">
+                        <input class="search__input" name="search" type="search" placeholder="搜索" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                        <span class="search__info">点按回车以开始搜索，Esc键退出搜索</span>
+                    </form>
+                    <div class="search__related">
+                        <div class="search__suggestion">
+                            <h3>May We Suggest?</h3>
+                            <p>#drone #funny #catgif #broken #lost #hilarious #good #red #blue #nono #why #yes #yesyes #aliens #green</p>
+                        </div>
+                    </div>
+                </div><!-- /search__inner -->
+            </div><!-- /search -->
+        </main><!-- /main-wrap -->
+        <img src="resource/devider.png"  style="height: 50px; padding-right: 20px; padding-left: 20px;"/>
+        <img src="resource/user.png"  style="height: 50px;"/>
+        <script src="lib/js/demo7.js"></script>
     </div>
-    <div id="news-player"></div>
+
+</div>
+<div id="master-container" class="col-10 flex flex-column flex-center" >
+    <div id="news-player" class="col-12 flex flex-center">
+        <div class="shutter" >
+            <div class="shutter-img">
+                <a href="#" data-shutter-title="第一届山东省人工智能大会在济南成功举行"><img src="resource/news/1.jpg" alt="#"></a>
+                <a href="#" data-shutter-title="山东大学举行人工智能国际联合研究院（筹）论证会暨山东大学—南洋理工大学人工智能联合研究计划启动仪式"><img src="resource/news/2.jpg" alt="#"></a>
+                <a href="#" data-shutter-title="山大学子勇夺“第二届国产CPU并行应用挑战赛”和“第六届英特尔杯全国并行应用挑战赛”两项金奖"><img src="resource/news/3.jpg" alt="#"></a>
+            </div>
+            <ul class="shutter-btn">
+                <li class="prev"></li>
+                <li class="next"></li>
+            </ul>
+            <div class="shutter-desc">
+                <p>第一届山东省人工智能大会在济南成功举行</p>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $('.shutter').shutter({
+                    shutterW: '100%', // 容器宽度
+                    shutterH: 550, // 容器高度
+                    isAutoPlay: true, // 是否自动播放
+                    playInterval: 4000, // 自动播放时间
+                    curDisplay: 3, // 当前显示页
+                    fullPage: false // 是否全屏展示
+                });
+            });
+        </script>
+    </div>
     <div id="event-calendar">
         <div id="event-list"></div>
         <div id="calendar" class="col-4" >
