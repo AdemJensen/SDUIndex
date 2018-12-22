@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link rel="stylesheet" href="lib/css/eventCalendar-home.css">
     <link rel="stylesheet" href="lib/css/gridSystem.css">
     <link rel="stylesheet" href="lib/css/shutter.css">
     <link rel="stylesheet" href="lib/css/default.css">
     <script src="lib/js/jQuery.js"></script>
     <script src="lib/js/velocity.js"></script>
     <script src="lib/js/shutter.js"></script>
+
     <link rel="stylesheet" type="text/css" href="lib/css/style7.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 
     <!--[if IE]>
     <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]--><script>document.documentElement.className = 'js';</script>
 </head>
-<body class="col-12 flex flex-column flex-center">
+<body class="col-12 flex flex-center flex-column">
 <div id="nav-bar" class="top-bg flex flex-between">
-    <div class="top-left"></div>
+    <div class="" style="padding-left: 35px;">
+        <img src="resource/logo.png" class="ln-11"/>
+    </div>
     <div id="search-button" class="flex flex-center" style="padding-right: 35px;">
         <main class="main-wrap">
             <div class="search-wrap">
-                <button id="btn-search" class="btn btn--search"><img src="https://pic.52112.com/icon/256/20181207/26085/1291337.png" style="height: 50px;"/></button>
+                <button id="btn-search" class="btn btn--search"><img src="https://pic.52112.com/icon/256/20181207/26085/1291337.png" style="height: 30px;"/></button>
                 <button id="btn-search-close" class="btn btn--hidden btn--search-close" aria-label="Close search form"><img src="https://pic.52112.com/icon/256/20180201/11994/603338.png" style="height: 50px;"/></button>
             </div>
             <div class="search">
@@ -41,13 +44,13 @@
                 </div><!-- /search__inner -->
             </div><!-- /search -->
         </main><!-- /main-wrap -->
-        <img src="resource/devider.png"  style="height: 50px; padding-right: 20px; padding-left: 20px;"/>
-        <img src="resource/user.png"  style="height: 50px;"/>
+        <img src="resource/devider.png"  style="height: 35px; padding-right: 20px; padding-left: 20px;"/>
+        <img src="resource/user.png"  style="height: 30px;"/>
         <script src="lib/js/demo7.js"></script>
     </div>
 
 </div>
-<div id="master-container" class="col-10 flex flex-column flex-center" >
+<div id="master-container" class="col-10 flex flex-column">
     <div id="news-player" class="col-12 flex flex-center">
         <div class="shutter" >
             <div class="shutter-img">
@@ -77,13 +80,82 @@
         </script>
     </div>
     <div id="event-calendar">
-        <img src="resource/enevt-calender-3.png" class="col-12">
+        <img src="resource/enent-calender-3.png" class="col-12">
     </div>
-    <div id="img-player"></div>
     <div id="scene-viewer">
-        
+        <section class="pc-banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-center none-effect">
+                        <a href="#">
+                            <img src="img/b1.png">
+                        </a>
+                        <div class="layer-mask"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/b2.png">
+                        </a>
+                        <div class="layer-mask"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/b3.png">
+                        </a>
+                        <div class="layer-mask"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/b4.png">
+                        </a>
+                        <div class="layer-mask"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/b5.png">
+                        </a>
+                        <div class="layer-mask"></div>
+                    </div>
+                </div>
+                <div class="button">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript">
+
+            window.onload = function() {
+                var swiper = new Swiper('.swiper-container',{
+                    autoplay: false,
+                    speed: 1000,
+                    autoplayDisableOnInteraction: false,
+                    loop: true,
+                    centeredSlides: true,
+                    slidesPerView: 2,
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    prevButton: '.swiper-button-prev',
+                    nextButton: '.swiper-button-next',
+                    onInit: function(swiper) {
+                        swiper.slides[2].className = "swiper-slide swiper-slide-active";
+                    },
+                    breakpoints: {
+                        668: {
+                            slidesPerView: 1,
+                        }
+                    }
+                });
+            }
+
+
+        </script>
     </div>
-    <div id="footer"></div>
+
+</div>
+<div id="footer" class="top-bg flex flex-row">
+    
 </div>
 </body>
 </html>
