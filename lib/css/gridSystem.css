@@ -125,3 +125,60 @@
 .ln-max-12 {
     max-height: 100%;
 }
+
+.flex {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+.flex-between {
+    justify-content: space-between;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.padding-none {
+    padding: 0;
+}
+.padding-sm {
+    padding: 8px 8px;
+}
+.padding-mi {
+    padding: 15px 15px;
+}
+.padding-lg {
+    padding: 25px 25px;
+}
+.margin-none {
+    margin: 0;
+}
+.margin-sm {
+    margin: 8px 8px;
+}
+.margin-mi {
+    margin: 15px 15px;
+}
+.margin-lg {
+    margin: 25px 25px;
+}
+.border-none {
+    border: 0;
+}
+
+.circled-border {
+    border-radius: 10px;
+    border: dashed white 2px;
+    color: white;
+}
