@@ -8,6 +8,15 @@
     background: #2B7FC7;
 }
 
+.bottom-bg {
+    width: 100%;
+    background: #2B7FC7;
+}
+
+.nav-btn {
+    background-color: #2B7FC7;
+}
+
 .btn {
     margin: 0;
     padding: 0;
